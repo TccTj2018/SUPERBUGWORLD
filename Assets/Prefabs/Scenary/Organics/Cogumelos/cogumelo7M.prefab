@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 4946975716621592}
   - component: {fileID: 33099661388745598}
   - component: {fileID: 23346694681730812}
+  - component: {fileID: 64405103486720386}
   m_Layer: 0
   m_Name: cogumelo7cabeca
   m_TagString: Untagged
@@ -80,8 +81,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1359167311852068}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -249.09, y: -0.63, z: -24.21}
-  m_LocalScale: {x: 1.6092, y: 1.6092, z: 1.6092}
+  m_LocalPosition: {x: 101.174515, y: 12.856255, z: -59.50068}
+  m_LocalScale: {x: 2.991882, y: 2.991882, z: 2.991882}
   m_Children:
   - {fileID: 4354732406120498}
   - {fileID: 4946975716621592}
@@ -185,3 +186,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1026138813444006}
   m_Mesh: {fileID: 4300000, guid: 212d5f21c7c0b164d865f8d6ec44dc3e, type: 3}
+--- !u!64 &64405103486720386
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1804448395860074}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: 212d5f21c7c0b164d865f8d6ec44dc3e, type: 3}

@@ -36,6 +36,7 @@ GameObject:
   - component: {fileID: 4512130336428264}
   - component: {fileID: 33837558056723124}
   - component: {fileID: 23046773318754698}
+  - component: {fileID: 64759589606345864}
   m_Layer: 0
   m_Name: GeoSphere002
   m_TagString: Untagged
@@ -93,7 +94,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1096123003772392}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -251.51, y: -0.77, z: -21.658}
+  m_LocalPosition: {x: 272.44, y: 36.29312, z: -166.01576}
   m_LocalScale: {x: 1.341245, y: 1.341245, z: 1.341245}
   m_Children:
   - {fileID: 4634417597612060}
@@ -185,4 +186,18 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1162923905560412}
+  m_Mesh: {fileID: 4300002, guid: 9fa47b31bbddd524d8b32cf3bd0a545c, type: 3}
+--- !u!64 &64759589606345864
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1162923905560412}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: 9fa47b31bbddd524d8b32cf3bd0a545c, type: 3}
