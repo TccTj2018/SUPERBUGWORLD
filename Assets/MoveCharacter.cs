@@ -57,7 +57,7 @@ public class MoveCharacter : MonoBehaviour {
             anim.SetBool("running", false);
         }
 
-        Debug.Log(translation);
+        //Debug.Log(translation);
         //float move = Input.GetAxis("Horizontal") * rotationSpeed; 
 
         translation = translation * Time.deltaTime;

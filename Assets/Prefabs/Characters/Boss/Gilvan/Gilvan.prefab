@@ -910,6 +910,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4640203234924754}
+  - component: {fileID: 114809137592397938}
   - component: {fileID: 95318026139309374}
   m_Layer: 0
   m_Name: Gilvan
@@ -1498,7 +1499,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1894297413165100}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.00000010430811}
-  m_LocalPosition: {x: -37.393627, y: -0.9650419, z: -2.8989854}
+  m_LocalPosition: {x: 666.48, y: -0.26974678, z: -0.32011482}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4534133500245504}
@@ -1891,6 +1892,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114809137592397938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1894297413165100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0705916a087a8304c85bc2864167fe84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gilvanObj: {fileID: 0}
+  gilvanAnim: {fileID: 0}
+  pedra: {fileID: 0}
+  pedraSpawn: {fileID: 0}
+  player: {fileID: 0}
+  massValor: 0
+  gilvanMao: {fileID: 0}
+  numero: 0
+  lookRadius: 10
+  target: {fileID: 0}
 --- !u!137 &137143079579001046
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
