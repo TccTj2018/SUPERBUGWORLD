@@ -865,7 +865,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4059332223732134, guid: 8cbed6543f554bb47a285436479b3682, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1630.62
+      value: 143.1
       objectReference: {fileID: 0}
     - target: {fileID: 4059332223732134, guid: 8cbed6543f554bb47a285436479b3682, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1179,6 +1179,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4959278255102604, guid: f758b4aede9e6874ca5259586a6464f7,
     type: 2}
   m_PrefabInternal: {fileID: 1005321464}
+--- !u!1001 &1084625996
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4407004252037276, guid: 9e6052c9bdea8324d9f3ff203438013e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 543.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407004252037276, guid: 9e6052c9bdea8324d9f3ff203438013e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 36.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407004252037276, guid: 9e6052c9bdea8324d9f3ff203438013e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -321.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407004252037276, guid: 9e6052c9bdea8324d9f3ff203438013e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407004252037276, guid: 9e6052c9bdea8324d9f3ff203438013e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.11502475
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407004252037276, guid: 9e6052c9bdea8324d9f3ff203438013e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407004252037276, guid: 9e6052c9bdea8324d9f3ff203438013e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.99336267
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407004252037276, guid: 9e6052c9bdea8324d9f3ff203438013e, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1812386901204814, guid: 9e6052c9bdea8324d9f3ff203438013e, type: 2}
+      propertyPath: m_Name
+      value: Caverna (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e6052c9bdea8324d9f3ff203438013e, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1166966313
 Prefab:
   m_ObjectHideFlags: 0
