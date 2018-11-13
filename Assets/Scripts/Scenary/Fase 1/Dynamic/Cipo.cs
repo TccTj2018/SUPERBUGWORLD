@@ -8,11 +8,11 @@ public class Cipo : MonoBehaviour {
 
     public float force;
 
-    Rigidbody rb;
+    CharacterController rb;
 
     private void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
+        rb = gameObject.GetComponent<CharacterController>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,7 +31,6 @@ public class Cipo : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) && player != null)
         {
             player.transform.parent = null;
-            player.GetComponent<Rigidbody>().AddForce(player.transform.up * force, ForceMode.Impulse);
             player.GetComponent<MoveCharacter>().enabled = true;
             player.transform.eulerAngles = new Vector3(0, 90, 0);
             StartCoroutine("WaitResetCol");
