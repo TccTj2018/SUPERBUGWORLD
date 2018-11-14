@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TrocaCena : MonoBehaviour {
-
+public class TrocaCena : MonoBehaviour
+{
+    public int scene;
     private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
-
+            SceneManager.LoadScene(scene);
         }
 
-        SceneManager.LoadScene(1);
+
     }
 }

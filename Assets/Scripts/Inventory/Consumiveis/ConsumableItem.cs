@@ -1,0 +1,16 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu]
+public class ConsumableItem : ScriptableObject
+{
+
+    public int itemID;
+    public string itemName;
+    public string descrition;
+    public Material imageItem;
+    public int healthGain;
+    public int manaGain;
+    public string message;
+}
