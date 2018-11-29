@@ -8,19 +8,17 @@ public class Cipo : MonoBehaviour {
 
     public float force;
 
-    CharacterController rb;
+    public Rigidbody rb;
+    public MoveCharacter mc;
 
-    private void Start()
-    {
-        rb = gameObject.GetComponent<CharacterController>();
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             player = other.gameObject;
-            other.gameObject.GetComponent<MoveCharacter>().enabled = false;
+            rb.useGravity = false;
+            mc.enabled = false;
             other.transform.parent = gameObject.transform;
             // MUDAR ANIMAÇÃO !
         }
@@ -31,7 +29,8 @@ public class Cipo : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) && player != null)
         {
             player.transform.parent = null;
-            player.GetComponent<MoveCharacter>().enabled = true;
+            rb.useGravity = true;
+            mc.enabled = true;
             player.transform.eulerAngles = new Vector3(0, 90, 0);
             StartCoroutine("WaitResetCol");
             player = null;
@@ -42,7 +41,7 @@ public class Cipo : MonoBehaviour {
     {
         Collider col = gameObject.GetComponent<Collider>();
         col.enabled = false;
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(1f);
         col.enabled = true;
     }
 }

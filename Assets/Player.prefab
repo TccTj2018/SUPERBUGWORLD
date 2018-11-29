@@ -794,11 +794,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4059332223732134}
   - component: {fileID: 95523198482616508}
-  - component: {fileID: 143860800052452598}
   - component: {fileID: 114518606763599822}
   - component: {fileID: 114578295478093502}
   - component: {fileID: 114875036942945468}
-  - component: {fileID: 54118102794478890}
+  - component: {fileID: 54550712402590374}
+  - component: {fileID: 136955677480646004}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1185,7 +1185,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1736449114342060}
   m_LocalRotation: {x: -0, y: 0.7074564, z: -0, w: 0.70675707}
-  m_LocalPosition: {x: 1389.28, y: 158.51, z: -888.414}
+  m_LocalPosition: {x: 138.42, y: 30.89, z: -168.14}
   m_LocalScale: {x: 0.9017159, y: 0.90171593, z: 0.90171593}
   m_Children:
   - {fileID: 4289786234227802}
@@ -2298,20 +2298,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1590641359981824}
   m_Mesh: {fileID: 4300006, guid: e2afef84ef7bd5644b0f363176e6fb62, type: 3}
---- !u!54 &54118102794478890
+--- !u!54 &54550712402590374
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1736449114342060}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!95 &95523198482616508
 Animator:
@@ -2344,8 +2344,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   rotationSpeed: 100
+  distToGround: 0.5
   jumpforce: 8
-  gravity: 20
+  rb: {fileID: 54550712402590374}
+  isFliped: 0
 --- !u!114 &114578295478093502
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2357,11 +2359,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e72657cf57d8949abab8fc0eef6a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idle: 0
+  soco1: 0
+  soco2: 0
+  soco3: 0
   socoAudio: {fileID: 0}
-  prefab: {fileID: 1396643967906940, guid: 5363add9a06acfa40ad4f58c841b2aa0, type: 2}
+  prefab: {fileID: 1198231562787790, guid: 30102efac879de84d8f6703a5bd106ca, type: 2}
   prefab2: {fileID: 1835342642916760, guid: 86ce08f62ce9bce44a8ff00eb7a232ad, type: 2}
-  spawpoint: {fileID: 4626647824975960}
-  pai: {fileID: 4626647824975960}
+  spawpoint: {fileID: 4596887904261508, guid: 701ad775e1f84f943bbbcdd5a925938e, type: 2}
+  spawpoint2: {fileID: 4723292788815160, guid: ace3cde32ab27e64281750e085472d5c, type: 2}
+  pai: {fileID: 4596887904261508, guid: 701ad775e1f84f943bbbcdd5a925938e, type: 2}
+  pai2: {fileID: 4723292788815160, guid: ace3cde32ab27e64281750e085472d5c, type: 2}
+  weaponEquipped: {fileID: 0}
+  health: 0
+  mana: 0
+  armor: {fileID: 0}
+  fireRate: 0
+  item: {fileID: 0}
+  maxHealth: 0
+  F_speed: 0
+  maxMana: 0
+  strength: 0
+  defense: 0
+  bugCoins: 0
+  mc: {fileID: 114518606763599822}
 --- !u!114 &114875036942945468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2374,8 +2395,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempoPorAtaque: 1.5
+  cronometroDeAtaque: 0
   VidaDoPlayer: 100
   DanoPorAtaque: 40
+  maxMana: 0
+  bugCoins: 0
+  isDead: 0
+  panelGameOver: {fileID: 0}
+  anim: {fileID: 0}
+  rend: {fileID: 0}
+--- !u!136 &136955677480646004
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1736449114342060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.6
+  m_Height: 2.53
+  m_Direction: 1
+  m_Center: {x: -0.12, y: 0.98, z: 0}
 --- !u!137 &137082645256754204
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -2635,20 +2676,3 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.017728448, y: 0.6729853, z: 0.5277176}
     m_Extent: {x: 0.63265014, y: 0.7103696, z: 0.77391744}
   m_DirtyAABB: 0
---- !u!143 &143860800052452598
-CharacterController:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1736449114342060}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.13, z: 0}
