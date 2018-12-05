@@ -13,7 +13,9 @@ public class Fight : MonoBehaviour {
     public GameObject prefab;
     public GameObject prefab2;
     public Transform spawpoint;
+    public Transform spawpoint2;
     public Transform pai;
+    public Transform pai2;
 
     public Weapon weaponEquipped;
     private Attack attack;
@@ -32,6 +34,9 @@ public class Fight : MonoBehaviour {
     public int strength ;
     public int defense;
     public int bugCoins;
+
+    public MoveCharacter mc;
+
     void Start () {
 
         anim = GetComponent<Animator>();
@@ -50,17 +55,17 @@ public class Fight : MonoBehaviour {
     }
 
     void Update () {
-        if (Input.GetButtonDown("Fire5") && soco1 == false ) {
-            socoAudio.Play();
+        if (Input.GetButtonDown("Ataque") ) {
+            //socoAudio.Play();
             anim.SetTrigger("soco1");
             soco2 = true;
-            //GameObject ObjetoInstanciado = Instantiate(prefab2, spawpoint.position, spawpoint.rotation, pai) as GameObject;
-            if (Input.GetButtonDown("Fire1") && soco1 == false && soco2 == true)
+            GameObject ObjetoInstanciado = Instantiate(prefab2, spawpoint.position, spawpoint.rotation, pai) as GameObject;
+            if (Input.GetButtonDown("Ataque") && soco1 == false && soco2 == true)
             {
 
                 anim.SetTrigger("soco2");
                 soco3 = true;
-                if (Input.GetButtonDown("Fire3") && soco1 == false && soco2 == true && soco3 == true)
+                if (Input.GetButtonDown("Ataque") && soco1 == false && soco2 == true && soco3 == true)
                 {
 
                     anim.SetTrigger("soco3");
@@ -68,12 +73,31 @@ public class Fight : MonoBehaviour {
                 }
             }
         }
-        if (Input.GetButtonDown("Fire6") )
+        if (Input.GetButtonDown("Magia") )
         {
 
-            anim.SetTrigger("soco4");
-           // GameObject ObjetoInstanciado = Instantiate(prefab, spawpoint.position, spawpoint.rotation,pai) as GameObject;
+            
            
+            if(mc.isFliped == true)
+            {
+                Debug.Log("Verdadeiro");
+                anim.SetTrigger("soco4");
+                GameObject ObjetoInstanciado = Instantiate(prefab, spawpoint2.position, spawpoint2.transform.rotation, pai2) as GameObject;
+                mc.enabled = false;
+                enabled = false;
+                StartCoroutine("Reset");
+            }
+            else
+            {
+                Debug.Log("False");
+                Debug.Log("Verdadeiro");
+                anim.SetTrigger("soco4");
+                GameObject ObjetoInstanciado = Instantiate(prefab, spawpoint.position, spawpoint.transform.rotation, pai) as GameObject;
+                mc.enabled = false;
+                enabled = false;
+                StartCoroutine("Reset");
+            }
+
         }
         if (Input.GetButtonDown("Fire2") && Time.time > nextAttack && weaponEquipped != null)
         {
@@ -90,7 +114,12 @@ public class Fight : MonoBehaviour {
 
     }
 
-
+    IEnumerator Reset()
+    {
+        yield return new WaitForSeconds(1);
+        mc.enabled = true;
+        enabled = true;
+    }
 
     public void AddWeapon(Weapon weapon)
     {

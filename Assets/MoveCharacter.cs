@@ -14,6 +14,8 @@ public class MoveCharacter : MonoBehaviour {
 
     public Rigidbody rb;
 
+    public bool isFliped;
+
 
 
     CharacterController p_Kleber;
@@ -119,7 +121,22 @@ public class MoveCharacter : MonoBehaviour {
         theScale.z *= -1;
         transform.localScale = theScale;
 
-    }
+        if(isFliped == false)
+        {
+            isFliped = true;
+        }
+        else
+        {
+            isFliped = false;
+        }
 
+    }
+    public void OnClick() {
+        
+        
+            anim.SetTrigger("jump");
+            rb.AddForce(0, jumpforce * 40f, 0, ForceMode.Impulse);
+        
+    }
 
 }
