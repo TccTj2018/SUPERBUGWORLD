@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour {
     public void Save()
     {
 
-       // player = FindObjectOfType<Fight>();
+       
   
 
         itemId = new int[inventory.itens.Count];

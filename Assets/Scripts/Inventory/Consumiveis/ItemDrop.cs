@@ -1,20 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemDrop : MonoBehaviour
 {
 
     public ConsumableItem item;
 
-    private MeshRenderer sprite;
+    private Image sprite;
 
 
     void Start()
     {
 
-        sprite = GetComponent<MeshRenderer>();
-        sprite.material = item.imageItem;
+        sprite = GetComponent<Image>();
+        sprite = item.imageItem;
 
     }
     //

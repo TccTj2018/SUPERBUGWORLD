@@ -62,7 +62,7 @@ public class PlayerHealth : MonoBehaviour
             rb.velocity = Vector3.zero;
             anim.SetTrigger("Dead");
             FindObjectOfType<Fight>().bugCoins += bugCoins;
-            //Invoke("ReloadScene", 2f);
+            Invoke("ReloadScene", 2f);
             //Invoke("GameOver", 1f);
            // panelGameOver.SetActive(true);
 
@@ -110,7 +110,7 @@ public class PlayerHealth : MonoBehaviour
         if(player != null)
         {
            // P_damage--;
-            rb.AddForce(speed * -2f, 0, 0, ForceMode.Impulse);
+            rb.AddForce(speed * -10f, 0, 0, ForceMode.Impulse);
             anim.SetTrigger("");
         }
       //  Debug.Log(P_damage);

@@ -51,7 +51,7 @@ public class UIManager : MonoBehaviour
     {
 
         UpdateUI();
-        
+        Debug.Log(cursorIndex);
 
         if (isMessageActive == true)
         {
@@ -80,7 +80,7 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             pauseMenu = !pauseMenu;
             itensListActive = false;
@@ -108,7 +108,7 @@ public class UIManager : MonoBehaviour
             }
             optionPanel.SetActive(true);
 
-            if (Input.GetKeyDown(KeyCode.DownArrow))
+            if (Input.GetButtonDown("Vertical"))
             {
                 if (itensListActive && cursorIndex >= menuOption.Length - 1)
                 {
@@ -134,7 +134,7 @@ public class UIManager : MonoBehaviour
                     UpdateDescrition();
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.UpArrow))
+            else if (Input.GetButtonDown("Vertical"))
             {
                 if (cursorIndex == 0)
                 {
@@ -149,7 +149,7 @@ public class UIManager : MonoBehaviour
                     UpdateDescrition();
                 }
             }
-            if (Input.GetButtonDown("Submit") && !itensListActive)
+            if (Input.GetButtonDown("Fire1") && !itensListActive)
             {
                 optionPanel.SetActive(false);
                 itemList.SetActive(true);
@@ -162,7 +162,7 @@ public class UIManager : MonoBehaviour
                 }
                 itensListActive = true;
             }
-            else if (Input.GetButtonDown("Submit") && !itensListActive)
+            else if (Input.GetKeyDown(KeyCode.E) && !itensListActive)
             {
                 if (itens.Count > 0)
                 {
@@ -172,7 +172,7 @@ public class UIManager : MonoBehaviour
         }
 
     }
-    void UseItem()
+    public void UseItem()
     {
         if (itens[cursorIndex].weapon != null)
         {
@@ -259,12 +259,17 @@ public class UIManager : MonoBehaviour
     {
 
         healthUI.text = inventory.health  + " / " + player.GetHealth();
-        manaUI.text = player.GetMana() + " / " + inventory.mana;
+        manaUI.text = inventory.mana  + " / " + player.GetMana();
         coinsUI.text = "BugCoins: " + inventory.bugCoins;
         potionUI.text = "x" + inventory.CountItens(player.item);
-        sliderHealth.value = player.GetHealth() + inventory.health;
-        sliderMana.value = player.GetMana() + inventory.mana;
+
+        //sliderHealth.value = player.GetHealth() + inventory.health;
+        sliderHealth.value = inventory.health;
+        // sliderMana.value = player.GetMana() + inventory.mana;
+        sliderMana.value =  inventory.mana;
+
         sliderStrength.value = inventory.CountItens(player.item);
+        
 
     }
 
@@ -274,5 +279,55 @@ public class UIManager : MonoBehaviour
         Color color = messageText.color;
         messageText.color = color;
         isMessageActive = true;
+    }
+
+    public void ButtonPause()
+    {
+        pauseMenu = !pauseMenu;
+        itensListActive = false;
+        descritionText.text = "";
+        itemList.SetActive(false);
+        UpdateAtributes();
+
+        if (pauseMenu == true)
+            pausePanel.SetActive(true);
+        else if (pauseMenu == false)
+            pausePanel.SetActive(false);
+
+    }
+    public void ButtonUpCursor()
+    {
+        if (cursorIndex == 0)
+        {
+            cursorIndex = 0;
+        }
+        else
+            cursorIndex--;
+
+        if (itensListActive && itens.Count > 0)
+        {
+            scrollVertical.value += (1f / (itens.Count - 1));
+            UpdateDescrition();
+        }
+    }
+    public void ButtonDownCursor()
+    {
+        if (itensListActive && cursorIndex >= menuOption.Length - 1)
+        {
+            cursorIndex = menuOption.Length - 1;
+        }
+        else if (!itensListActive && cursorIndex >= itens.Count - 1)
+        {
+            if (itens.Count == 0)
+            {
+                cursorIndex = 0;
+            }
+            else
+            {
+                cursorIndex = itens.Count - 1;
+            }
+        }
+        else
+            cursorIndex++;
     }
 }

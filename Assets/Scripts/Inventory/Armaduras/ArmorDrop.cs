@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ArmorDrop : MonoBehaviour {
 
-    private MeshRenderer sprite;
+    private Image sprite;
 
     public Armor item;
 
     void Start()
     {
 
-        sprite = GetComponent<MeshRenderer>();
-        sprite.material = item.imageArmor;
+        sprite = GetComponent<Image>();
+        sprite = item.imageArmor;
 
     }
     //

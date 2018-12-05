@@ -16,6 +16,10 @@ public class Enemy : MonoBehaviour {
     public Transform spawpoint2;
     public float speed;
     public float speed2;
+
+    public int healthEnemy;
+    private int bugCoins;
+
     void Start () {
 		anim = GetComponent<Animator> ();
 	    agent = GetComponent<NavMeshAgent> ();
@@ -86,6 +90,21 @@ public class Enemy : MonoBehaviour {
 		yield return new WaitForSeconds (3.0f);
 		StartCoroutine ("random");
 	}
-    
+    public void TookDamage(int damage)
+    {
+        healthEnemy = damage;
+        if (healthEnemy <= 0)
+        {
+
+            FindObjectOfType<Fight>().bugCoins += bugCoins;
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            StartCoroutine(random());
+        }
+
+    }
+
 
 }

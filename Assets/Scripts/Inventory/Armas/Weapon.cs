@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu]
 
@@ -10,8 +11,8 @@ public class Weapon : ScriptableObject
     public string weaponName;
     public string descrition;
     public int damage;
-    public Material imageItens;
-    public AnimationClip animationAnim;
+    public Image imageItens;
+    public Rigidbody animationAnim;
     public string messageTela;
 
 

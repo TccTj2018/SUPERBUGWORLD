@@ -18,7 +18,7 @@ public class ItemList : MonoBehaviour
     {
 
         consumableItem = item;
-        imageItem.material = consumableItem.imageItem;
+        imageItem = consumableItem.imageItem;
         textItem.text = consumableItem.itemName;
     }
 
@@ -26,14 +26,14 @@ public class ItemList : MonoBehaviour
     public void SetupWeapon(Weapon item)
     {
         weapon = item;
-        imageItem.material = weapon.imageItens;
+        imageItem = weapon.imageItens;
         textItem.text = weapon.weaponName;
     }
 
     public void SetupArmor(Armor item)
     {
         armor = item;
-        imageItem.material = armor.imageArmor;
+        imageItem = armor.imageArmor;
         textItem.text = armor.armorName;
     }
 }

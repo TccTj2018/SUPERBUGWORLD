@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f515824ceabc3bc41b3ab20242937b62, type: 3}
-  m_Name: Potion
+  m_Name: PotionSimples
   m_EditorClassIdentifier: 
-  itemID: 2
-  itemName: PotionCurta
-  descrition: Pocao Simples
-  imageItem: {fileID: 2100000, guid: 92fde63a30dbf2b4a979e5d1fce41b99, type: 2}
-  healthGain: 0
-  manaGain: 50
-  message: "Po\xE7\xE3o simples"
+  itemID: 6
+  itemName: "Po\xE7\xE3o Simples"
+  descrition: "Po\xE7\xE3o simples ajuda nas batalhas intensas"
+  imageItem: {fileID: 0}
+  healthGain: 30
+  manaGain: 0
+  message: Potion Sample

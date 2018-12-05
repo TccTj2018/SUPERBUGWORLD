@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 327d217108bd20e469276f4248366e01, type: 3}
-  m_Name: Armor1
+  m_Name: ArmaduraSimples
   m_EditorClassIdentifier: 
-  itemID: 4
-  armorName: Armorrrrrrr
-  descrition: Descrition Armorrrr
-  imageArmor: {fileID: 2100000, guid: 63a5f3c2d1f06aa4e9ef40f2d7257671, type: 2}
-  defense: 50
-  message: BBBBLLLAAAAA
+  itemID: 8
+  armorName: Armadura Simples
+  descrition: Aumenta as defesas do player
+  imageArmor: {fileID: 0}
+  defense: 30
+  message: Armadura Simples

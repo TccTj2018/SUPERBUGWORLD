@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponDrop : MonoBehaviour
 {
@@ -8,13 +9,14 @@ public class WeaponDrop : MonoBehaviour
     public Weapon weapon;
     public GameObject ObjectDestroy;
 
-    private MeshRenderer sprite;
+    private Image sprite;
 
     void Start()
     {
 
-        sprite = GetComponent<MeshRenderer>();
-        sprite.material = weapon.imageItens;
+        sprite = GetComponent<Image>();
+
+        sprite = weapon.imageItens;
 
     }
 
