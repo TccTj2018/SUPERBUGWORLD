@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: ef84bcd5779f3f04796ef36359a9ff1d
+timeCreated: 1540254345
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: "Cabe\xE7a - Wagner002"
+    100002: Camise Wagner
+    100004: Gravata Wagner
+    100006: Mao - Wagner1
+    100008: Mao - Wagner2
+    100010: //RootNode
+    100012: Olho - Wagner
+    100014: Olho - Wagner2
+    100016: Pernas - Wagner
+    100018: Terno Wagner
+    400000: "Cabe\xE7a - Wagner002"
+    400002: Camise Wagner
+    400004: Gravata Wagner
+    400006: Mao - Wagner1
+    400008: Mao - Wagner2
+    400010: //RootNode
+    400012: Olho - Wagner
+    400014: Olho - Wagner2
+    400016: Pernas - Wagner
+    400018: Terno Wagner
+    2300000: "Cabe\xE7a - Wagner002"
+    2300002: Camise Wagner
+    2300004: Gravata Wagner
+    2300006: Mao - Wagner1
+    2300008: Mao - Wagner2
+    2300010: Olho - Wagner
+    2300012: Olho - Wagner2
+    2300014: Pernas - Wagner
+    2300016: Terno Wagner
+    3300000: "Cabe\xE7a - Wagner002"
+    3300002: Camise Wagner
+    3300004: Gravata Wagner
+    3300006: Mao - Wagner1
+    3300008: Mao - Wagner2
+    3300010: Olho - Wagner
+    3300012: Olho - Wagner2
+    3300014: Pernas - Wagner
+    3300016: Terno Wagner
+    4300000: Terno Wagner
+    4300002: Gravata Wagner
+    4300004: "Cabe\xE7a - Wagner002"
+    4300006: Camise Wagner
+    4300008: Mao - Wagner1
+    4300010: Mao - Wagner2
+    4300012: Pernas - Wagner
+    4300014: Olho - Wagner2
+    4300016: Olho - Wagner
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default
+    second: {fileID: 2100000, guid: a35545101623ca549a44dfca4598102e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: a35545101623ca549a44dfca4598102e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 14 - Default
+    second: {fileID: 2100000, guid: a35545101623ca549a44dfca4598102e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #248'
+    second: {fileID: 2100000, guid: a35545101623ca549a44dfca4598102e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin01
+    second: {fileID: 2100000, guid: a35545101623ca549a44dfca4598102e, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

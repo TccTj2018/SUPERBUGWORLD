@@ -1,0 +1,369 @@
+fileFormatVersion: 2
+guid: 62e61e9af2b4ad542adef6a2d0adc881
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cube001Clone
+    100004: Cube001Clone 1
+    100006: Cube001Clone 10
+    100008: Cube001Clone 11
+    100010: Cube001Clone 12
+    100012: Cube001Clone 13
+    100014: Cube001Clone 14
+    100016: Cube001Clone 15
+    100018: Cube001Clone 16
+    100020: Cube001Clone 17
+    100022: Cube001Clone 18
+    100024: Cube001Clone 19
+    100026: Cube001Clone 2
+    100028: Cube001Clone 20
+    100030: Cube001Clone 21
+    100032: Cube001Clone 22
+    100034: Cube001Clone 23
+    100036: Cube001Clone 24
+    100038: Cube001Clone 25
+    100040: Cube001Clone 26
+    100042: Cube001Clone 27
+    100044: Cube001Clone 28
+    100046: Cube001Clone 29
+    100048: Cube001Clone 3
+    100050: Cube001Clone 30
+    100052: Cube001Clone 31
+    100054: Cube001Clone 32
+    100056: Cube001Clone 33
+    100058: Cube001Clone 34
+    100060: Cube001Clone 35
+    100062: Cube001Clone 36
+    100064: Cube001Clone 37
+    100066: Cube001Clone 38
+    100068: Cube001Clone 39
+    100070: Cube001Clone 4
+    100072: Cube001Clone 40
+    100074: Cube001Clone 41
+    100076: Cube001Clone 42
+    100078: Cube001Clone 43
+    100080: Cube001Clone 44
+    100082: Cube001Clone 45
+    100084: Cube001Clone 46
+    100086: Cube001Clone 47
+    100088: Cube001Clone 48
+    100090: Cube001Clone 49
+    100092: Cube001Clone 5
+    100094: Cube001Clone 50
+    100096: Cube001Clone 51
+    100098: Cube001Clone 52
+    100100: Cube001Clone 53
+    100102: Cube001Clone 54
+    100104: Cube001Clone 6
+    100106: Cube001Clone 7
+    100108: Cube001Clone 8
+    100110: Cube001Clone 9
+    400000: //RootNode
+    400002: Cube001Clone
+    400004: Cube001Clone 1
+    400006: Cube001Clone 10
+    400008: Cube001Clone 11
+    400010: Cube001Clone 12
+    400012: Cube001Clone 13
+    400014: Cube001Clone 14
+    400016: Cube001Clone 15
+    400018: Cube001Clone 16
+    400020: Cube001Clone 17
+    400022: Cube001Clone 18
+    400024: Cube001Clone 19
+    400026: Cube001Clone 2
+    400028: Cube001Clone 20
+    400030: Cube001Clone 21
+    400032: Cube001Clone 22
+    400034: Cube001Clone 23
+    400036: Cube001Clone 24
+    400038: Cube001Clone 25
+    400040: Cube001Clone 26
+    400042: Cube001Clone 27
+    400044: Cube001Clone 28
+    400046: Cube001Clone 29
+    400048: Cube001Clone 3
+    400050: Cube001Clone 30
+    400052: Cube001Clone 31
+    400054: Cube001Clone 32
+    400056: Cube001Clone 33
+    400058: Cube001Clone 34
+    400060: Cube001Clone 35
+    400062: Cube001Clone 36
+    400064: Cube001Clone 37
+    400066: Cube001Clone 38
+    400068: Cube001Clone 39
+    400070: Cube001Clone 4
+    400072: Cube001Clone 40
+    400074: Cube001Clone 41
+    400076: Cube001Clone 42
+    400078: Cube001Clone 43
+    400080: Cube001Clone 44
+    400082: Cube001Clone 45
+    400084: Cube001Clone 46
+    400086: Cube001Clone 47
+    400088: Cube001Clone 48
+    400090: Cube001Clone 49
+    400092: Cube001Clone 5
+    400094: Cube001Clone 50
+    400096: Cube001Clone 51
+    400098: Cube001Clone 52
+    400100: Cube001Clone 53
+    400102: Cube001Clone 54
+    400104: Cube001Clone 6
+    400106: Cube001Clone 7
+    400108: Cube001Clone 8
+    400110: Cube001Clone 9
+    2100000: 15 - Default
+    2100002: 20 - Default
+    2100004: 'Material #27'
+    2100006: 13 - Default
+    2300000: Cube001Clone
+    2300002: Cube001Clone 1
+    2300004: Cube001Clone 10
+    2300006: Cube001Clone 11
+    2300008: Cube001Clone 12
+    2300010: Cube001Clone 13
+    2300012: Cube001Clone 14
+    2300014: Cube001Clone 15
+    2300016: Cube001Clone 16
+    2300018: Cube001Clone 17
+    2300020: Cube001Clone 18
+    2300022: Cube001Clone 19
+    2300024: Cube001Clone 2
+    2300026: Cube001Clone 20
+    2300028: Cube001Clone 21
+    2300030: Cube001Clone 22
+    2300032: Cube001Clone 23
+    2300034: Cube001Clone 24
+    2300036: Cube001Clone 25
+    2300038: Cube001Clone 26
+    2300040: Cube001Clone 27
+    2300042: Cube001Clone 28
+    2300044: Cube001Clone 29
+    2300046: Cube001Clone 3
+    2300048: Cube001Clone 30
+    2300050: Cube001Clone 31
+    2300052: Cube001Clone 32
+    2300054: Cube001Clone 33
+    2300056: Cube001Clone 34
+    2300058: Cube001Clone 35
+    2300060: Cube001Clone 36
+    2300062: Cube001Clone 37
+    2300064: Cube001Clone 38
+    2300066: Cube001Clone 39
+    2300068: Cube001Clone 4
+    2300070: Cube001Clone 40
+    2300072: Cube001Clone 41
+    2300074: Cube001Clone 42
+    2300076: Cube001Clone 43
+    2300078: Cube001Clone 44
+    2300080: Cube001Clone 45
+    2300082: Cube001Clone 46
+    2300084: Cube001Clone 47
+    2300086: Cube001Clone 48
+    2300088: Cube001Clone 49
+    2300090: Cube001Clone 5
+    2300092: Cube001Clone 50
+    2300094: Cube001Clone 51
+    2300096: Cube001Clone 52
+    2300098: Cube001Clone 53
+    2300100: Cube001Clone 54
+    2300102: Cube001Clone 6
+    2300104: Cube001Clone 7
+    2300106: Cube001Clone 8
+    2300108: Cube001Clone 9
+    3300000: Cube001Clone
+    3300002: Cube001Clone 1
+    3300004: Cube001Clone 10
+    3300006: Cube001Clone 11
+    3300008: Cube001Clone 12
+    3300010: Cube001Clone 13
+    3300012: Cube001Clone 14
+    3300014: Cube001Clone 15
+    3300016: Cube001Clone 16
+    3300018: Cube001Clone 17
+    3300020: Cube001Clone 18
+    3300022: Cube001Clone 19
+    3300024: Cube001Clone 2
+    3300026: Cube001Clone 20
+    3300028: Cube001Clone 21
+    3300030: Cube001Clone 22
+    3300032: Cube001Clone 23
+    3300034: Cube001Clone 24
+    3300036: Cube001Clone 25
+    3300038: Cube001Clone 26
+    3300040: Cube001Clone 27
+    3300042: Cube001Clone 28
+    3300044: Cube001Clone 29
+    3300046: Cube001Clone 3
+    3300048: Cube001Clone 30
+    3300050: Cube001Clone 31
+    3300052: Cube001Clone 32
+    3300054: Cube001Clone 33
+    3300056: Cube001Clone 34
+    3300058: Cube001Clone 35
+    3300060: Cube001Clone 36
+    3300062: Cube001Clone 37
+    3300064: Cube001Clone 38
+    3300066: Cube001Clone 39
+    3300068: Cube001Clone 4
+    3300070: Cube001Clone 40
+    3300072: Cube001Clone 41
+    3300074: Cube001Clone 42
+    3300076: Cube001Clone 43
+    3300078: Cube001Clone 44
+    3300080: Cube001Clone 45
+    3300082: Cube001Clone 46
+    3300084: Cube001Clone 47
+    3300086: Cube001Clone 48
+    3300088: Cube001Clone 49
+    3300090: Cube001Clone 5
+    3300092: Cube001Clone 50
+    3300094: Cube001Clone 51
+    3300096: Cube001Clone 52
+    3300098: Cube001Clone 53
+    3300100: Cube001Clone 54
+    3300102: Cube001Clone 6
+    3300104: Cube001Clone 7
+    3300106: Cube001Clone 8
+    3300108: Cube001Clone 9
+    4300000: Cube001Clone
+    4300002: Cube001Clone
+    4300004: Cube001Clone
+    4300006: Cube001Clone
+    4300008: Cube001Clone
+    4300010: Cube001Clone
+    4300012: Cube001Clone
+    4300014: Cube001Clone
+    4300016: Cube001Clone
+    4300018: Cube001Clone
+    4300020: Cube001Clone
+    4300022: Cube001Clone
+    4300024: Cube001Clone
+    4300026: Cube001Clone
+    4300028: Cube001Clone
+    4300030: Cube001Clone
+    4300032: Cube001Clone
+    4300034: Cube001Clone
+    4300036: Cube001Clone
+    4300038: Cube001Clone
+    4300040: Cube001Clone
+    4300042: Cube001Clone
+    4300044: Cube001Clone
+    4300046: Cube001Clone
+    4300048: Cube001Clone
+    4300050: Cube001Clone
+    4300052: Cube001Clone
+    4300054: Cube001Clone
+    4300056: Cube001Clone
+    4300058: Cube001Clone
+    4300060: Cube001Clone
+    4300062: Cube001Clone
+    4300064: Cube001Clone
+    4300066: Cube001Clone
+    4300068: Cube001Clone
+    4300070: Cube001Clone
+    4300072: Cube001Clone
+    4300074: Cube001Clone
+    4300076: Cube001Clone
+    4300078: Cube001Clone
+    4300080: Cube001Clone
+    4300082: Cube001Clone
+    4300084: Cube001Clone
+    4300086: Cube001Clone
+    4300088: Cube001Clone
+    4300090: Cube001Clone
+    4300092: Cube001Clone
+    4300094: Cube001Clone
+    4300096: Cube001Clone
+    4300098: Cube001Clone
+    4300100: Cube001Clone
+    4300102: Cube001Clone
+    4300104: Cube001Clone
+    4300106: Cube001Clone
+    4300108: Cube001Clone
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
