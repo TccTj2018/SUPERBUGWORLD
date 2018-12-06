@@ -46,7 +46,7 @@ public class Fight : MonoBehaviour {
         // maxHealth = inventory.health;
         //maxMana = inventory.mana;
         //defense = inventory.strength;
-        FindObjectOfType<GameManager>().Load();
+        //FindObjectOfType<GameManager>().Load();
        // FindObjectOfType<UIManager>().UpdateUI();
         inventory = GameManager.inventory;
         move = GetComponent<MoveCharacter>();

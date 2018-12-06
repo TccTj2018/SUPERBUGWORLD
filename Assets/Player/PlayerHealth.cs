@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
         //panelGameOver = GameObject.Find("GameOver").GetComponent<GameObject>();
         //panelGameOver.SetActive(false);
 
-        VidaDoPlayer = GameManager.inventory.health;
+        //VidaDoPlayer = GameManager.inventory.health;
        // VidaDoPlayer = player.maxHealth;
         DanoPorAtaque = player.strength;
         maxMana = player.maxMana;

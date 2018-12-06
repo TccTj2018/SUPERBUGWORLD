@@ -258,17 +258,17 @@ public class UIManager : MonoBehaviour
     public void UpdateUI()
     {
 
-        healthUI.text = inventory.health  + " / " + player.GetHealth();
-        manaUI.text = inventory.mana  + " / " + player.GetMana();
-        coinsUI.text = "BugCoins: " + inventory.bugCoins;
-        potionUI.text = "x" + inventory.CountItens(player.item);
+        //healthUI.text = inventory.health  + " / " + player.GetHealth();
+        //manaUI.text = inventory.mana  + " / " + player.GetMana();
+        //coinsUI.text = "BugCoins: " + inventory.bugCoins;
+        //potionUI.text = "x" + inventory.CountItens(player.item);
 
         //sliderHealth.value = player.GetHealth() + inventory.health;
-        sliderHealth.value = inventory.health;
+        //sliderHealth.value = inventory.health;
         // sliderMana.value = player.GetMana() + inventory.mana;
-        sliderMana.value =  inventory.mana;
+        //sliderMana.value =  inventory.mana;
 
-        sliderStrength.value = inventory.CountItens(player.item);
+        //sliderStrength.value = inventory.CountItens(player.item);
         
 
     }
