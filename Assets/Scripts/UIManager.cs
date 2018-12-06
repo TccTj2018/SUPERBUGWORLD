@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -250,7 +250,7 @@ public class UIManager : MonoBehaviour
     {
         healthText.text = "Vida: " +  player.GetHealth() + "/" + inventory.health;
         manaText.text = "Vitalidade: " + player.GetMana() + "/" + inventory.mana;
-        strengthText.text = "For�a: " + inventory.strength;
+        strengthText.text = "Força: " + inventory.strength;
         attackText.text = "Ataque: " + (inventory.strength + player.GetComponentInChildren<Attack>().GetDamage());
         defenseText.text = "Defesa: " + player.defense;
     }

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class dano : MonoBehaviour {
 
@@ -24,7 +24,7 @@ public class BugCoin : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             //Este pode ser adicionado na morte de um inimigo para que 
-            //tamb�m colete BugCoins
+            //também colete BugCoins
             FindObjectOfType<Fight>().bugCoins += bugCoins;
         }
 

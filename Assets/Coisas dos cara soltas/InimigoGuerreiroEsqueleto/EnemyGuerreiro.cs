@@ -9,9 +9,6 @@ public class EnemyGuerreiro : MonoBehaviour {
     public Transform target;
     NavMeshAgent agent;
     public Animator anim;
-    bool inAtack = false;
-
-    public SystemAudio systemAudio;
 
 
     void Start()
@@ -55,24 +52,12 @@ public class EnemyGuerreiro : MonoBehaviour {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
-    IEnumerator FunctionResetAtack()
-    {
-        yield return new WaitForSeconds(3.2f);
-        inAtack = false;
-    }
-    private void OnTriggerStay(Collider col)
+    private void OnTriggerEnter(Collider col)
     {
         if (col.transform.tag == "Player")
         {
 
-            if (inAtack == false)
-            {
-                inAtack = true;
-                StartCoroutine("FunctionResetAtack");
-                anim.SetBool("ataque", true);
-                systemAudio.SetAudio(1, gameObject.transform, true);
-
-            }
+            anim.SetBool("ataque", true);
 
         }
     }
