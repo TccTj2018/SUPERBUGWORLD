@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,7 +20,7 @@ public class WeaponDrop : MonoBehaviour
 
     }
 
-    //Método para coletar a arma,
+    //M�todo para coletar a arma,
     private void OnTriggerEnter(Collider other)
     {
 

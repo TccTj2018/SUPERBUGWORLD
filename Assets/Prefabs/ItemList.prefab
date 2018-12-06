@@ -165,7 +165,7 @@ MonoBehaviour:
   weapon: {fileID: 0}
   consumableItem: {fileID: 0}
   textItem: {fileID: 114284978294403532}
-  imageItem: {fileID: 0}
+  imageItem: {fileID: 114175010156879254}
   armor: {fileID: 0}
 --- !u!114 &114898909062758908
 MonoBehaviour:

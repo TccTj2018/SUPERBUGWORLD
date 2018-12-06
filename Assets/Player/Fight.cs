@@ -56,20 +56,17 @@ public class Fight : MonoBehaviour {
     }
 
     void Update () {
-        if (Input.GetButtonDown("Fire1") ) {
+        if (Input.GetButtonDown("Ataque") ) {
             //socoAudio.Play();
             anim.SetTrigger("soco1");
             soco2 = true;
-
-           
-
-
-            if (Input.GetButtonDown("Fire1") && soco1 == false && soco2 == true)
+            GameObject ObjetoInstanciado = Instantiate(prefab2, spawpoint.position, spawpoint.rotation, pai) as GameObject;
+            if (Input.GetButtonDown("Ataque") && soco1 == false && soco2 == true)
             {
 
                 anim.SetTrigger("soco2");
                 soco3 = true;
-                if (Input.GetButtonDown("Fire2") && soco1 == false && soco2 == true && soco3 == true)
+                if (Input.GetButtonDown("Ataque") && soco1 == false && soco2 == true && soco3 == true)
                 {
 
                     anim.SetTrigger("soco3");
@@ -77,7 +74,7 @@ public class Fight : MonoBehaviour {
                 }
             }
         }
-        if (Input.GetButtonDown("Ataque") )
+        if (Input.GetButtonDown("Magia") )
         {
 
             
@@ -86,11 +83,10 @@ public class Fight : MonoBehaviour {
             {
                 Debug.Log("Verdadeiro");
                 anim.SetTrigger("soco4");
-                GameObject ObjetoInstanciado = Instantiate(prefab, spawpoint2.position, spawpoint2.rotation) as GameObject;
+                GameObject ObjetoInstanciado = Instantiate(prefab, spawpoint2.position, spawpoint2.transform.rotation, pai2) as GameObject;
                 mc.enabled = false;
                 enabled = false;
                 StartCoroutine("Reset");
-                
             }
             else
             {
@@ -104,20 +100,13 @@ public class Fight : MonoBehaviour {
             }
 
         }
-        if (Input.GetButtonDown("Fire3") && Time.time > nextAttack && weaponEquipped != null)
+        if (Input.GetButtonDown("Fire2") && Time.time > nextAttack && weaponEquipped != null)
         {
             anim.SetTrigger("soco1");
             attack.PlayAnimation(weaponEquipped.animationAnim);
             nextAttack = Time.time + fireRate;
-            Rigidbody clone;
-            clone = Instantiate(weaponEquipped.animationAnim, spawpoint.position, spawpoint.rotation);
-            clone = weaponEquipped.animationAnim;
-
-            clone.velocity = transform.TransformDirection(Vector3.forward * 2);
-
-            inventory.mana--;
         }
-        if (Input.GetKeyDown(KeyCode.Y))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             UseItem(item);
             GameManager.inventory.RemoveItem(item);

@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        //RecebendoDano = false; // A VARIAVEL RecebendoDano RECEBE FALSO
+        RecebendoDano = false; // A VARIAVEL RecebendoDano RECEBE FALSO
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
         rend = GetComponent<GameObject>();
@@ -56,13 +56,13 @@ public class PlayerHealth : MonoBehaviour
            // cronometroDeAtaque = 0; // CRONOMETRO RECEBE 0
            // VidaDoPlayer = VidaDoPlayer - DanoPorAtaque; // A VIDA DO PLAYER RECEBE O VALOR DELA MESMA MENOS O DANO DO ATAQUE
         }
-        if (VidaDoPlayer <= 0 )
+        if (VidaDoPlayer <= 0 && maxMana <= 0)
         { // SE A VIDA FOR MENOR OU IGUAL A 0
             isDead = true;
             rb.velocity = Vector3.zero;
             anim.SetTrigger("Dead");
             FindObjectOfType<Fight>().bugCoins += bugCoins;
-            Invoke("ReloadScene", 2f);
+            //Invoke("ReloadScene", 2f);
             //Invoke("GameOver", 1f);
            // panelGameOver.SetActive(true);
 

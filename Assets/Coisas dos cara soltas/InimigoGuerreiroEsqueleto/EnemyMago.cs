@@ -5,10 +5,13 @@ using UnityEngine.AI;
 
 public class EnemyMago : MonoBehaviour {
 
+    public SystemAudio systemAudio;
+
     public float lookRadius = 10f;
     public Transform target;
     NavMeshAgent agent;
     public Animator anim;
+    bool inAtack = false;
    
   
     void Start()
@@ -40,8 +43,6 @@ public class EnemyMago : MonoBehaviour {
         if (distance > lookRadius)
         {
             anim.SetBool("running", false);
-
-
         }
         
 
@@ -52,12 +53,24 @@ public class EnemyMago : MonoBehaviour {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
-    private void OnTriggerEnter(Collider col)
+    IEnumerator FunctionResetAtack()
+    {
+        yield return new WaitForSeconds(1.5f);
+        inAtack = false;
+    }
+    private void OnTriggerStay(Collider col)
     {
         if (col.transform.tag == "Player")
         {
+            if (inAtack == false)
+            {
+                inAtack = true;
+                StartCoroutine("FunctionResetAtack");
+                anim.SetBool("ataque", true);
+                systemAudio.SetAudio(3, gameObject.transform, true);
 
-            anim.SetBool("ataque", true);
+            }
+           
 
         }
     }
