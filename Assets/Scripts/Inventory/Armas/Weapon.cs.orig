@@ -1,0 +1,29 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+<<<<<<< HEAD
+using UnityEngine.UI;
+=======
+>>>>>>> maurilio
+
+[CreateAssetMenu]
+
+public class Weapon : ScriptableObject
+{
+    public int itemID;
+    public string weaponName;
+    public string descrition;
+    public int damage;
+<<<<<<< HEAD
+    public Image imageItens;
+    public Rigidbody animationAnim;
+=======
+    public Material imageItens;
+    public AnimationClip animationAnim;
+>>>>>>> maurilio
+    public string messageTela;
+
+
+
+
+}

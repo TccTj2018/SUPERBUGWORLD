@@ -1,0 +1,24 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+<<<<<<< HEAD
+using UnityEngine.UI;
+=======
+>>>>>>> maurilio
+
+[CreateAssetMenu]
+public class Armor : ScriptableObject
+{
+
+    public int itemID;
+    public string armorName;
+    public string descrition;
+<<<<<<< HEAD
+    public Image imageArmor;
+=======
+    public Material imageArmor;
+>>>>>>> maurilio
+    public int defense;
+    public string message;
+
+}
