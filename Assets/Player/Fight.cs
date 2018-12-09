@@ -104,12 +104,13 @@ public class Fight : MonoBehaviour {
             }
 
         }
-        if (Input.GetButtonDown("Fire3") && Time.time > nextAttack && weaponEquipped != null)
+        if (Input.GetButtonDown("Fire2") && Time.time > nextAttack && weaponEquipped != null)
         {
             anim.SetTrigger("soco1");
             attack.PlayAnimation(weaponEquipped.animationAnim);
             nextAttack = Time.time + fireRate;
             Rigidbody clone;
+
             clone = Instantiate(weaponEquipped.animationAnim, spawpoint.position, spawpoint.rotation);
             clone = weaponEquipped.animationAnim;
 
