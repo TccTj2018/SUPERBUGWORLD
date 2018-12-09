@@ -51,7 +51,7 @@ public class UIManager : MonoBehaviour
     {
 
         UpdateUI();
-        Debug.Log(cursorIndex);
+       // Debug.Log(cursorIndex);
 
         if (isMessageActive == true)
         {
@@ -80,7 +80,7 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             pauseMenu = !pauseMenu;
             itensListActive = false;
@@ -108,7 +108,7 @@ public class UIManager : MonoBehaviour
             }
             optionPanel.SetActive(true);
 
-            if (Input.GetButtonDown("Vertical"))
+            if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 if (itensListActive && cursorIndex >= menuOption.Length - 1)
                 {
@@ -134,7 +134,7 @@ public class UIManager : MonoBehaviour
                     UpdateDescrition();
                 }
             }
-            else if (Input.GetButtonDown("Vertical"))
+            else if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 if (cursorIndex == 0)
                 {
@@ -162,7 +162,7 @@ public class UIManager : MonoBehaviour
                 }
                 itensListActive = true;
             }
-            else if (Input.GetKeyDown(KeyCode.E) && !itensListActive)
+            else if (Input.GetKeyDown(KeyCode.O) && !itensListActive)
             {
                 if (itens.Count > 0)
                 {
@@ -248,8 +248,8 @@ public class UIManager : MonoBehaviour
 
     void UpdateAtributes()
     {
-        healthText.text = "Vida: " +  player.GetHealth() + "/" + inventory.health;
-        manaText.text = "Vitalidade: " + player.GetMana() + "/" + inventory.mana;
+        healthText.text = "Vida: " + inventory.health  + "/" + player.GetHealth();
+        manaText.text = "Vitalidade: " + inventory.mana + "/" + player.GetMana();
         strengthText.text = "Força: " + inventory.strength;
         attackText.text = "Ataque: " + (inventory.strength + player.GetComponentInChildren<Attack>().GetDamage());
         defenseText.text = "Defesa: " + player.defense;
@@ -258,15 +258,18 @@ public class UIManager : MonoBehaviour
     public void UpdateUI()
     {
 
-        //healthUI.text = inventory.health  + " / " + player.GetHealth();
-        //manaUI.text = inventory.mana  + " / " + player.GetMana();
-        //coinsUI.text = "BugCoins: " + inventory.bugCoins;
-        //potionUI.text = "x" + inventory.CountItens(player.item);
+        healthUI.text = inventory.health  + " / " + player.GetHealth();
+        manaUI.text = inventory.mana  + " / " + player.GetMana();
+        coinsUI.text = "BugCoins: " + inventory.bugCoins;
+        //Debug.Log(player.item);
+        potionUI.text = "x" + inventory.CountItens(player.item);
+
+        //Debug.Log(sliderHealth.value);
 
         //sliderHealth.value = player.GetHealth() + inventory.health;
-        //sliderHealth.value = inventory.health;
+        sliderHealth.value = (float)inventory.health /100;
         // sliderMana.value = player.GetMana() + inventory.mana;
-        //sliderMana.value =  inventory.mana;
+        sliderMana.value =  (float)inventory.mana;
 
         //sliderStrength.value = inventory.CountItens(player.item);
         

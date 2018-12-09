@@ -47,7 +47,7 @@ public class Fight : MonoBehaviour {
         //maxMana = inventory.mana;
         //defense = inventory.strength;
         //FindObjectOfType<GameManager>().Load();
-        // FindObjectOfType<UIManager>().UpdateUI();
+         FindObjectOfType<UIManager>().UpdateUI();
         inventory = GameManager.inventory;
         move = GetComponent<MoveCharacter>();
         //Debug.Log("start Fight" + inventory.playerPosX);
@@ -137,6 +137,7 @@ public class Fight : MonoBehaviour {
     {
         weaponEquipped = weapon;
         attack.SetWeapon(weaponEquipped.damage);
+
         Debug.Log(weaponEquipped.damage);
 
     }
@@ -146,6 +147,7 @@ public class Fight : MonoBehaviour {
     {
         armor = item;
         defense = armor.defense;
+
         Debug.Log(defense);
     }
     //Para o script de vida.
@@ -156,6 +158,7 @@ public class Fight : MonoBehaviour {
         {
             health = maxHealth;
         }
+
         inventory.mana += item.manaGain;
         if (inventory.mana >= maxMana)
             inventory.mana = maxMana;

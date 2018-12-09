@@ -1123,6 +1123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4626647824975960}
+  - component: {fileID: 114199665564266484}
   m_Layer: 0
   m_Name: PositionAtaque
   m_TagString: Untagged
@@ -1270,7 +1271,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1736449114342060}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: 0.7074564, z: -0, w: 0.70675707}
   m_LocalPosition: {x: 126.4, y: 32.83, z: -167.76}
   m_LocalScale: {x: 0.9017159, y: 0.90171593, z: 0.90171593}
   m_Children:
@@ -2972,6 +2973,19 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &114199665564266484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1925816077739834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b10b58b2ea14643a433f198ec74edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  destroyTime: 1.5
 --- !u!114 &114518606763599822
 MonoBehaviour:
   m_ObjectHideFlags: 1

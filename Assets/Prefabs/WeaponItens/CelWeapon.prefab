@@ -55,7 +55,6 @@ GameObject:
   - component: {fileID: 54684018116911356}
   - component: {fileID: 65482529630845430}
   - component: {fileID: 114297084630424116}
-  - component: {fileID: 114320282682549262}
   m_Layer: 0
   m_Name: CelWeapon
   m_TagString: Untagged
@@ -263,19 +262,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: 7df7c595bca4dcf43835928f447aa9d6, type: 2}
   ObjectDestroy: {fileID: 1534895835769160}
---- !u!114 &114320282682549262
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1534895835769160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85b10b58b2ea14643a433f198ec74edd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  destroyTime: 2
 --- !u!212 &212831464429050044
 SpriteRenderer:
   m_ObjectHideFlags: 1

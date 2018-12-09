@@ -103,7 +103,7 @@ public class Enemy : MonoBehaviour {
         }
         else
         {
-            StartCoroutine(random());
+            OnDrawGizmosSelected();
         }
 
     }

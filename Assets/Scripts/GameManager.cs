@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour {
     void Awake()
     {
         filePath = Application.persistentDataPath + "/playerInfo.data";
-       // Debug.Log(filePath);
+        //Debug.Log(filePath);
 
         player = FindObjectOfType<Fight>();
 
@@ -95,9 +95,6 @@ public class GameManager : MonoBehaviour {
 
     public void Save()
     {
-
-       
-  
 
         itemId = new int[inventory.itens.Count];
 
@@ -175,7 +172,9 @@ public class GameManager : MonoBehaviour {
 
             }
         }
+        Debug.Log(numberOfItens);
         return numberOfItens;
+
     }
 
     public void LoadInventory()

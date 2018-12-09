@@ -59,7 +59,7 @@ public class Attack : MonoBehaviour
         }
 
 
-        Destroy(gameObject);
+        attackPlayer.SetActive(false);
     }
 
 }

@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1638640323324638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.52365, y: 1.9844455, z: 90.5337}
+  m_LocalPosition: {x: 39.52365, y: 1.9844455, z: -166.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,14 +57,14 @@ MonoBehaviour:
   health: 100
   mana: 50
   strength: 10
-  playerPosX: 0
-  playerPosY: 0
-  playerPosZ: 0
+  playerPosX: 107.48
+  playerPosY: 32.83
+  playerPosZ: -167.76
   minCamX: 0
   maxCamX: 0
   minCamY: 0
   maxCamY: 0
-  bugCoins: 0
+  bugCoins: 2000
   itemId: 
   weaponId: 
   armorId: 
