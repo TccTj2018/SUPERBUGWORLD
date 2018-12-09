@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour {
     public Transform spawpoint2;
     public float speed;
     public float speed2;
-
+    public SystemAudio sa;
     public int healthEnemy;
     private int bugCoins;
 
@@ -60,8 +60,10 @@ public class Enemy : MonoBehaviour {
             Temporary_RigidBody2 = Temporary_Bullet_Handler2.GetComponent<Rigidbody>();
             Temporary_RigidBody2.AddForce(transform.forward * speed2);
             Destroy(Temporary_Bullet_Handler2, 10.0f);
+            
 
             numero = 0;
+            sa.SetAudio(Random.Range(41,43), gameObject.transform);
         }
         if (numero == 2) {
 			anim.SetTrigger("ataque2");
@@ -75,7 +77,7 @@ public class Enemy : MonoBehaviour {
             Destroy(Temporary_Bullet_Handler, 10.0f);
 
             numero = 0;
-           
+            sa.SetAudio(44, gameObject.transform);
         }
 
 
@@ -101,10 +103,10 @@ public class Enemy : MonoBehaviour {
         }
         else
         {
-            StartCoroutine(random());
+            OnDrawGizmosSelected();
         }
 
     }
-
+   
 
 }

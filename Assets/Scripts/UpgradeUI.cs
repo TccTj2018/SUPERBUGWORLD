@@ -67,7 +67,7 @@ public class UpgradeUI : MonoBehaviour {
                 attributesText[2].color = Color.green;
             }
 
-            if (Input.GetButtonDown("Submit") && player.bugCoins >= GameManager.inventory.upgradeCost)
+            if (Input.GetButtonDown("Fire1") && player.bugCoins >= GameManager.inventory.upgradeCost)
             {
                 inventory.bugCoins -= GameManager.inventory.upgradeCost;
                 GameManager.inventory.upgradeCost += (GameManager.inventory.upgradeCost / 2);

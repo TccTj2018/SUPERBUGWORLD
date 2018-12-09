@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15be984ebd603174abc802910830916f, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  itemID: 10
+  weaponName: Test
+  descrition: Testing
+  damage: 20
+  imageItens: {fileID: 0}
+  animationAnim: {fileID: 54821955242223922, guid: 4e3c166e3031af04b859ab46ba915a84,
+    type: 2}
+  messageTela: TestingWeapon

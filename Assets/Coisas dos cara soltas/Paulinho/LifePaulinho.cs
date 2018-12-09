@@ -6,8 +6,8 @@ public class LifePaulinho : MonoBehaviour {
 
 	public float health = 100f;
 
-
-	public void RemoveHealth(float amount){
+    
+    public void RemoveHealth(float amount){
 
 		health -= amount;
 		if (health <= 0) {

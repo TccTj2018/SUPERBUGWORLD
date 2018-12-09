@@ -28,17 +28,17 @@ public class Fight : MonoBehaviour {
     public Armor armor;
     public float fireRate;
     public ConsumableItem item;
-    public int maxHealth ;
+    public int maxHealth;
     public float F_speed;
-    public int maxMana ;
-    public int strength ;
+    public int maxMana;
+    public int strength;
     public int defense;
     public int bugCoins;
     public Rigidbody projectile;
 
     public MoveCharacter mc;
 
-    void Start () {
+    void Start() {
 
         anim = GetComponent<Animator>();
         idle = true;
@@ -47,7 +47,7 @@ public class Fight : MonoBehaviour {
         //maxMana = inventory.mana;
         //defense = inventory.strength;
         //FindObjectOfType<GameManager>().Load();
-       // FindObjectOfType<UIManager>().UpdateUI();
+         FindObjectOfType<UIManager>().UpdateUI();
         inventory = GameManager.inventory;
         move = GetComponent<MoveCharacter>();
         //Debug.Log("start Fight" + inventory.playerPosX);
@@ -55,13 +55,13 @@ public class Fight : MonoBehaviour {
 
     }
 
-    void Update () {
-        if (Input.GetButtonDown("Fire1") ) {
+    void Update() {
+        if (Input.GetButtonDown("Fire1")) {
             //socoAudio.Play();
             anim.SetTrigger("soco1");
             soco2 = true;
 
-           
+
 
 
             if (Input.GetButtonDown("Fire1") && soco1 == false && soco2 == true)
@@ -77,12 +77,12 @@ public class Fight : MonoBehaviour {
                 }
             }
         }
-        if (Input.GetButtonDown("Ataque") )
+        if (Input.GetButtonDown("Ataque"))
         {
 
-            
-           
-            if(mc.isFliped == true)
+
+
+            if (mc.isFliped == true)
             {
                 Debug.Log("Verdadeiro");
                 anim.SetTrigger("soco4");
@@ -90,7 +90,7 @@ public class Fight : MonoBehaviour {
                 mc.enabled = false;
                 enabled = false;
                 StartCoroutine("Reset");
-                
+
             }
             else
             {
@@ -104,12 +104,13 @@ public class Fight : MonoBehaviour {
             }
 
         }
-        if (Input.GetButtonDown("Fire3") && Time.time > nextAttack && weaponEquipped != null)
+        if (Input.GetButtonDown("Fire2") && Time.time > nextAttack && weaponEquipped != null)
         {
             anim.SetTrigger("soco1");
             attack.PlayAnimation(weaponEquipped.animationAnim);
             nextAttack = Time.time + fireRate;
             Rigidbody clone;
+
             clone = Instantiate(weaponEquipped.animationAnim, spawpoint.position, spawpoint.rotation);
             clone = weaponEquipped.animationAnim;
 
@@ -122,7 +123,7 @@ public class Fight : MonoBehaviour {
             UseItem(item);
             GameManager.inventory.RemoveItem(item);
         }
-        
+
 
     }
 
@@ -137,6 +138,7 @@ public class Fight : MonoBehaviour {
     {
         weaponEquipped = weapon;
         attack.SetWeapon(weaponEquipped.damage);
+
         Debug.Log(weaponEquipped.damage);
 
     }
@@ -146,6 +148,7 @@ public class Fight : MonoBehaviour {
     {
         armor = item;
         defense = armor.defense;
+
         Debug.Log(defense);
     }
     //Para o script de vida.
@@ -156,6 +159,7 @@ public class Fight : MonoBehaviour {
         {
             health = maxHealth;
         }
+
         inventory.mana += item.manaGain;
         if (inventory.mana >= maxMana)
             inventory.mana = maxMana;
@@ -174,9 +178,9 @@ public class Fight : MonoBehaviour {
     {
         Vector3 playerPosition = new Vector3(inventory.playerPosX, inventory.playerPosY, inventory.playerPosZ);
 
-       // Debug.Log("SetPlayer" + inventory.playerPosX);
+        // Debug.Log("SetPlayer" + inventory.playerPosX);
         move.transform.position = playerPosition;
-       // Debug.Log(playerPosition);
+        // Debug.Log(playerPosition);
 
         maxMana = inventory.mana;
         maxHealth = inventory.health;
@@ -185,7 +189,7 @@ public class Fight : MonoBehaviour {
         mana = maxMana;
         strength = inventory.strength;
 
-        if(inventory.currentArmorId > 0)
+        if (inventory.currentArmorId > 0)
         {
             AddArmor(GameManager.inventory.itemDataBase.GetArmor(inventory.currentArmorId));
         }
@@ -213,6 +217,46 @@ public class Fight : MonoBehaviour {
         UseItem(item);
         GameManager.inventory.RemoveItem(item);
     }
+    public void ataque1() {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            //socoAudio.Play();
+            anim.SetTrigger("soco1");
+            soco2 = true;
 
+
+
+
+            if (Input.GetButtonDown("Fire1") && soco1 == false && soco2 == true)
+            {
+
+                anim.SetTrigger("soco2");
+                soco3 = true;
+                if (Input.GetButtonDown("Fire1") && soco1 == false && soco2 == true && soco3 == true)
+                {
+
+                    anim.SetTrigger("soco3");
+                    soco2 = true;
+                }
+            }
+        }
+    }
+        public void ataque2() {
+
+        if (Input.GetButtonDown("Fire3") && Time.time > nextAttack && weaponEquipped != null)
+        {
+            anim.SetTrigger("soco1");
+            attack.PlayAnimation(weaponEquipped.animationAnim);
+            nextAttack = Time.time + fireRate;
+            Rigidbody clone;
+            clone = Instantiate(weaponEquipped.animationAnim, spawpoint.position, spawpoint.rotation);
+            clone = weaponEquipped.animationAnim;
+
+            clone.velocity = transform.TransformDirection(Vector3.forward * 2);
+
+            inventory.mana--;
+        }
+    }
+    
 
 }

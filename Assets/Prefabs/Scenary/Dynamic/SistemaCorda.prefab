@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 54645560753469634}
   - component: {fileID: 65084617225326840}
   - component: {fileID: 114409413662656442}
+  - component: {fileID: 114593522941174590}
   m_Layer: 0
   m_Name: ObjetoGrude
   m_TagString: Untagged
@@ -85,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1896150319732910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1401.7, y: 163.75, z: -887.9098}
+  m_LocalPosition: {x: 492.64716, y: 9.84, z: 0.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4724564247310246}
@@ -245,3 +246,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   force: 20
+  rb: {fileID: 0}
+  mc: {fileID: 0}
+--- !u!114 &114593522941174590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1699753295448960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7919874b08f061c419425551109932cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numAudio: 5
+  colTrigger: 1
+  addForceUp: 0
