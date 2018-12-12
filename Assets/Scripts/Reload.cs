@@ -7,6 +7,6 @@ public class Reload : MonoBehaviour {
 
     public void ReloadCena()
     {
-        SceneManager.LoadScene("Fase 2");
+        SceneManager.LoadScene(0);
     }
 }

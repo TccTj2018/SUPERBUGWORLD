@@ -1199,7 +1199,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1028800999436658}
   m_LocalRotation: {x: -0, y: 0.6812117, z: -0, w: 0.73208654}
-  m_LocalPosition: {x: 631.79224, y: 28.08, z: -167.30562}
+  m_LocalPosition: {x: 1097.1, y: 28.08, z: -167.76}
   m_LocalScale: {x: 2.0641778, y: 2.0641763, z: 2.0641763}
   m_Children:
   - {fileID: 4782227890986290}
@@ -1611,6 +1611,7 @@ MonoBehaviour:
   spawpoint2: {fileID: 4910745559895158}
   speed: 400
   speed2: 150
+  sa: {fileID: 0}
   healthEnemy: 0
 --- !u!137 &137058795411625140
 SkinnedMeshRenderer:

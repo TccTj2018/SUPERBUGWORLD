@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fase 4.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/MenuInicial.unity
+    guid: d8bfab4af05450849af2d397a6416944
+  - enabled: 1
+    path: Assets/Scenes/Loading.unity
+    guid: f5e19b2892c588d438c3c322cf94f6bf
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: c6004fd5cdb08024f96dccdfb35127bf
   m_configObjects: {}

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveCharacterGilvan : MonoBehaviour {
-    /// sempre quando se referir ao player principal chamar de p_Kleber;
+    // sempre quando se referir ao player principal chamar de p_Kleber;
     //static Animator anim;
     public float speed = 10;
     public float rotationSpeed = 100.0f;

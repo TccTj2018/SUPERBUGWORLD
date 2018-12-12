@@ -224,4 +224,8 @@ public class GameManager : MonoBehaviour {
 
         }
     }
+    public void resetarVida()
+    {
+        health = 100;
+    }
 }

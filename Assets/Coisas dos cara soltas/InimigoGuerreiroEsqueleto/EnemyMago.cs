@@ -12,8 +12,7 @@ public class EnemyMago : MonoBehaviour {
     NavMeshAgent agent;
     public Animator anim;
     bool inAtack = false;
-   
-  
+    
     void Start()
     {
         anim = GetComponent<Animator>();

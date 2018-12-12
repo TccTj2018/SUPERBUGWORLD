@@ -11,6 +11,16 @@ public class MoveEspinhos : MonoBehaviour {
     public float dist = 10f;
     public float movementSpeed = 3.0f;
     private float startPos;
+    public int damageEnemy = 5;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Entrou No Trigger!");
+            FindObjectOfType<PlayerHealth>().DamagePlayer(damageEnemy);
+        }
+    }
 
 
     private void OnCollisionEnter(Collision collision)

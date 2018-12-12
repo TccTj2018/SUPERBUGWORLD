@@ -56,7 +56,7 @@ public class Fight : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetButtonDown("Fire1")) {
+        if (Input.GetButtonDown("Ataque")) {
             //socoAudio.Play();
             anim.SetTrigger("soco1");
             soco2 = true;
@@ -64,12 +64,12 @@ public class Fight : MonoBehaviour {
 
 
 
-            if (Input.GetButtonDown("Fire1") && soco1 == false && soco2 == true)
+            if (Input.GetButtonDown("Ataque") && soco1 == false && soco2 == true)
             {
 
                 anim.SetTrigger("soco2");
                 soco3 = true;
-                if (Input.GetButtonDown("Fire2") && soco1 == false && soco2 == true && soco3 == true)
+                if (Input.GetButtonDown("Ataque") && soco1 == false && soco2 == true && soco3 == true)
                 {
 
                     anim.SetTrigger("soco3");
@@ -77,7 +77,7 @@ public class Fight : MonoBehaviour {
                 }
             }
         }
-        if (Input.GetButtonDown("Ataque"))
+        if (Input.GetButtonDown("Magia"))
         {
 
 
@@ -218,8 +218,7 @@ public class Fight : MonoBehaviour {
         GameManager.inventory.RemoveItem(item);
     }
     public void ataque1() {
-        if (Input.GetButtonDown("Fire1"))
-        {
+       
             //socoAudio.Play();
             anim.SetTrigger("soco1");
             soco2 = true;
@@ -227,25 +226,24 @@ public class Fight : MonoBehaviour {
 
 
 
-            if (Input.GetButtonDown("Fire1") && soco1 == false && soco2 == true)
+            if ( soco2 == true)
             {
 
                 anim.SetTrigger("soco2");
                 soco3 = true;
-                if (Input.GetButtonDown("Fire1") && soco1 == false && soco2 == true && soco3 == true)
+                if ( soco3 == true)
                 {
 
                     anim.SetTrigger("soco3");
                     soco2 = true;
                 }
             }
-        }
+        
     }
         public void ataque2() {
 
-        if (Input.GetButtonDown("Fire3") && Time.time > nextAttack && weaponEquipped != null)
-        {
-            anim.SetTrigger("soco1");
+        
+            anim.SetTrigger("soco4");
             attack.PlayAnimation(weaponEquipped.animationAnim);
             nextAttack = Time.time + fireRate;
             Rigidbody clone;
@@ -255,7 +253,7 @@ public class Fight : MonoBehaviour {
             clone.velocity = transform.TransformDirection(Vector3.forward * 2);
 
             inventory.mana--;
-        }
+        
     }
     
 

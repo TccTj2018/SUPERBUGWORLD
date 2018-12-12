@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour {
 
-    
+    public GameManager gm;
    
  
     public void trocacena()
     {
         SceneManager.LoadScene("Fase 1");
+        gm.health = 100;
     }
 }

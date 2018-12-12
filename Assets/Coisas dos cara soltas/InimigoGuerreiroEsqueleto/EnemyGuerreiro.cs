@@ -10,6 +10,7 @@ public class EnemyGuerreiro : MonoBehaviour {
     NavMeshAgent agent;
     public Animator anim;
     bool inAtack = false;
+    
 
     public SystemAudio systemAudio;
 

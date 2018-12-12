@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class gilvan : MonoBehaviour {
     public GameObject gilvanObj;
-    //public Animator gilvanAnim;
     public GameObject pedra;
     public GameObject pedraSpawn;
     public Rigidbody player;
@@ -17,52 +16,63 @@ public class gilvan : MonoBehaviour {
     public Transform target;
     public MoveCharacterGilvan pm;
     Rigidbody rbp;
-
+    public float health;
+    public SystemAudio systemAudio;
+    private Animator gilvanAnim;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         StartCoroutine("random");
+        gilvanAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (health < 0f)
+        {
+            systemAudio.SetAudio(34, gameObject.transform, false, false, 3);
+            gilvanAnim.SetTrigger("morrendo");
+        }
+
 
         float playerDistance = Vector3.Distance(target.position, transform.position);
         if (playerDistance <= lookRadius)
         {
             agent.SetDestination(target.position);
-            //gilvanAnim.SetBool("running", true);
+            gilvanAnim.SetBool("running", true);
 
             if (playerDistance <= agent.stoppingDistance)
             {
-               // gilvanAnim.SetBool("running", false);
+               gilvanAnim.SetBool("running", false);
             }
 
         }
         if (playerDistance > lookRadius)
         {
-            //gilvanAnim.SetBool("running", false);
+            gilvanAnim.SetBool("running", false);
 
 
         }
         if (numero == 1)
         {
+            Debug.Log("Rodck");
             RockThrow();
-
-
+            systemAudio.SetAudio(31, transform, false, false);
+            numero = 0;
 
         }
         else if (numero == 2)
         {
+            systemAudio.SetAudio(30, transform, false, false);
             RockDown();
             numero = 0;
 
         }
         else if (numero == 3)
         {
-
+            systemAudio.SetAudio(28, transform, false, false);
             pm.GravityAtack();
             numero = 0;
         }
@@ -76,7 +86,7 @@ public class gilvan : MonoBehaviour {
     }
     IEnumerator random()
     {
-
+        Debug.Log("CU");
         numero = Random.Range(1, 4);
         yield return new WaitForSeconds(3.0f);
         StartCoroutine("random");
@@ -85,8 +95,7 @@ public class gilvan : MonoBehaviour {
 
     void RockDown() {
         numero = 0;
-        Debug.Log("InvocaPedra");
-        //gilvanAnim.SetTrigger("Bater o pé");
+        gilvanAnim.SetTrigger("Bater o pé");
 
         GameObject pedraSpawn = GameObject.Find("pedraSpawn");
         GameObject TempPedra = Instantiate(pedra, pedraSpawn.transform.position, pedraSpawn.transform.rotation) as GameObject;
@@ -112,15 +121,17 @@ public class gilvan : MonoBehaviour {
 
     void RockThrow()
     {
+        numero = 0;
+        Debug.Log("InvocaPedra");
         GameObject TempPedra = Instantiate(pedra, gilvanMao.transform.position, gilvanMao.transform.rotation) as GameObject;
         rbp = TempPedra.GetComponent<Rigidbody>();
         Debug.Log("lançou");
-        //gilvanAnim.SetTrigger("Bater o pé");
+        gilvanAnim.SetTrigger("lancar");
         gilvanMao.transform.LookAt(player.transform.position);
 
-        rbp.AddForce(0, 0, -20, ForceMode.Impulse);
+        rbp.AddForce(gilvanMao.transform.forward * 20, ForceMode.Impulse);
         rbp.useGravity = true;
-        numero = 0;
+      
 
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyMagoIdle : MonoBehaviour {
 
@@ -11,12 +12,15 @@ public class EnemyMagoIdle : MonoBehaviour {
 
     public SystemAudio SA;
 
+    NavMeshAgent agent;
+
     bool inAtack = false;
 
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
 
 
 
@@ -27,6 +31,17 @@ public class EnemyMagoIdle : MonoBehaviour {
     {
 
         float distance = Vector3.Distance(target.position, transform.position);
+        if (distance <= lookRadius)
+        {
+            agent.SetDestination(target.position);
+            anim.SetBool("running", true);
+
+            if (distance <= agent.stoppingDistance)
+            {
+                anim.SetBool("running", false);
+            }
+
+        }
         if (distance <= lookRadius)
         {
 

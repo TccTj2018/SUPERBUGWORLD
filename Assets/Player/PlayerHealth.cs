@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     private Rigidbody rb;
     public Animator anim;
     public GameObject rend;
+    public GameManager gm;
     private Fight player;
     private float speed = 4.0f;
 
@@ -43,6 +44,8 @@ public class PlayerHealth : MonoBehaviour
     }
     void Update()
     {
+        VidaDoPlayer = gm.health;
+
         if (RecebendoDano == true)
         { // SE RecebendoDano ESTA VERDADEIRO
            // cronometroDeAtaque += Time.deltaTime; // O CRONOMETRO COMEÇA A CONTAR
@@ -56,17 +59,20 @@ public class PlayerHealth : MonoBehaviour
            // cronometroDeAtaque = 0; // CRONOMETRO RECEBE 0
            // VidaDoPlayer = VidaDoPlayer - DanoPorAtaque; // A VIDA DO PLAYER RECEBE O VALOR DELA MESMA MENOS O DANO DO ATAQUE
         }
-        if (VidaDoPlayer <= 0 )
+        if (VidaDoPlayer <= 0)
         { // SE A VIDA FOR MENOR OU IGUAL A 0
             isDead = true;
+            SceneManager.LoadScene(6);
             rb.velocity = Vector3.zero;
             anim.SetTrigger("Dead");
             FindObjectOfType<Fight>().bugCoins += bugCoins;
             Invoke("ReloadScene", 2f);
             //Invoke("GameOver", 1f);
-           // panelGameOver.SetActive(true);
+            // panelGameOver.SetActive(true);
 
         }
+
+        
         else
         {
             //panelGameOver.SetActive(false);
@@ -91,7 +97,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void GameOver()
     {
-        SceneManager.LoadScene("MenuInicial");
+        //SceneManager.LoadScene("MenuInicial");
     }
     void ReloadScene()
      {

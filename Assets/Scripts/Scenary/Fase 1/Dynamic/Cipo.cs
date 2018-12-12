@@ -8,8 +8,8 @@ public class Cipo : MonoBehaviour {
 
     public float force;
 
-    public Rigidbody rb;
     public MoveCharacter mc;
+    public Rigidbody rb;
 
 
     private void OnTriggerEnter(Collider other)
@@ -17,8 +17,8 @@ public class Cipo : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
             player = other.gameObject;
-            rb.useGravity = false;
             mc.enabled = false;
+            rb.useGravity = false;
             other.transform.parent = gameObject.transform;
             // MUDAR ANIMAÇÃO !
         }
@@ -29,8 +29,9 @@ public class Cipo : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) && player != null)
         {
             player.transform.parent = null;
-            rb.useGravity = true;
             mc.enabled = true;
+            rb.useGravity = true;
+            rb.velocity = new Vector3(0, 0, 0);
             player.transform.eulerAngles = new Vector3(0, 90, 0);
             StartCoroutine("WaitResetCol");
             player = null;
