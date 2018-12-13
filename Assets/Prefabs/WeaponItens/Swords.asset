@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15be984ebd603174abc802910830916f, type: 3}
   m_Name: Swords
   m_EditorClassIdentifier: 
-  itemID: 6
-  weaponName: Sword
-  descrition: Arma Curta
-  damage: 5
-  imageItens: {fileID: 0}
-  animationAnim: {fileID: 0}
-  messageTela: 
+  itemID: 3
+  weaponName: Swards
+  descrition: "Fogo de destrui\xE7\xE3o"
+  damage: 30
+  imageItens: {fileID: 2100000, guid: 1d2f0a1112947f84ca5b61c9c391ffd5, type: 2}
+  animationAnim: {fileID: 7400000, guid: 7c30d8b358628b141b57d88216aa87e4, type: 2}
+  messageTela: Arma simples

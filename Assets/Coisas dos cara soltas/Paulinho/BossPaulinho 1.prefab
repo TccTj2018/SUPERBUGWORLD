@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 208063801623914794}
   - component: {fileID: 195763866720114924}
   - component: {fileID: 114944377303804132}
+  - component: {fileID: 114831726418909546}
   m_Layer: 0
   m_Name: BossPaulinho 1
   m_TagString: Untagged
@@ -1198,8 +1199,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1028800999436658}
   m_LocalRotation: {x: -0, y: 0.6812117, z: -0, w: 0.73208654}
-  m_LocalPosition: {x: -4.92, y: -0.96, z: -2.47}
-  m_LocalScale: {x: 0.9262878, y: 0.9262872, z: 0.9262872}
+  m_LocalPosition: {x: 631.79224, y: 28.08, z: -167.30562}
+  m_LocalScale: {x: 2.0641778, y: 2.0641763, z: 2.0641763}
   m_Children:
   - {fileID: 4782227890986290}
   - {fileID: 4293226965914218}
@@ -1577,6 +1578,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114831726418909546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1028800999436658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd850d3f4aac5be449c21acb1e8325c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!114 &114944377303804132
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1588,7 +1601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3752b8a5f9c921498e828bfa1908c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 3
+  lookRadius: 10
   target: {fileID: 0}
   anim: {fileID: 95898639398210444}
   numero: 0
@@ -1598,6 +1611,7 @@ MonoBehaviour:
   spawpoint2: {fileID: 4910745559895158}
   speed: 400
   speed2: 150
+  healthEnemy: 0
 --- !u!137 &137058795411625140
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -2048,10 +2062,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.03
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 8000
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1

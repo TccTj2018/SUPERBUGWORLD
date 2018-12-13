@@ -51,7 +51,7 @@ public class UIManager : MonoBehaviour
     {
 
         UpdateUI();
-        Debug.Log(cursorIndex);
+        //Debug.Log(cursorIndex);
 
         if (isMessageActive == true)
         {
@@ -80,8 +80,9 @@ public class UIManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.P))
         {
+            
             pauseMenu = !pauseMenu;
             itensListActive = false;
             descritionText.text = "";
@@ -96,7 +97,7 @@ public class UIManager : MonoBehaviour
         if (pauseMenu == true)
         {
             Vector3 cursorPosition = new Vector3();
-            if (!itensListActive == true)
+            if (!itensListActive == true && itens.Count >= 0)
             {
                 cursorPosition = menuOption[cursorIndex].transform.position;
                 cursor.position = new Vector3(cursorPosition.x - 100, cursorPosition.y, cursorPosition.z);
@@ -108,7 +109,7 @@ public class UIManager : MonoBehaviour
             }
             optionPanel.SetActive(true);
 
-            if (Input.GetButtonDown("Vertical"))
+            if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 if (itensListActive && cursorIndex >= menuOption.Length - 1)
                 {
@@ -134,7 +135,7 @@ public class UIManager : MonoBehaviour
                     UpdateDescrition();
                 }
             }
-            else if (Input.GetButtonDown("Vertical"))
+            else if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 if (cursorIndex == 0)
                 {
@@ -151,6 +152,7 @@ public class UIManager : MonoBehaviour
             }
             if (Input.GetButtonDown("Fire1") && !itensListActive)
             {
+                
                 optionPanel.SetActive(false);
                 itemList.SetActive(true);
                 UpdateItensList(cursorIndex);
@@ -162,7 +164,7 @@ public class UIManager : MonoBehaviour
                 }
                 itensListActive = true;
             }
-            else if (Input.GetKeyDown(KeyCode.E) && !itensListActive)
+            else if (Input.GetKeyDown(KeyCode.Q) && !itensListActive)
             {
                 if (itens.Count > 0)
                 {
@@ -251,7 +253,7 @@ public class UIManager : MonoBehaviour
         healthText.text = "Vida: " +  player.GetHealth() + "/" + inventory.health;
         manaText.text = "Vitalidade: " + player.GetMana() + "/" + inventory.mana;
         strengthText.text = "Força: " + inventory.strength;
-        attackText.text = "Ataque: " + (inventory.strength + player.GetComponentInChildren<Attack>().GetDamage());
+        //attackText.text = "Ataque: " + (inventory.strength + player.GetComponentInChildren<Attack>().GetDamage());
         defenseText.text = "Defesa: " + player.defense;
     }
 
@@ -261,14 +263,14 @@ public class UIManager : MonoBehaviour
         healthUI.text = inventory.health  + " / " + player.GetHealth();
         manaUI.text = inventory.mana  + " / " + player.GetMana();
         coinsUI.text = "BugCoins: " + inventory.bugCoins;
-        potionUI.text = "x" + inventory.CountItens(player.item);
+        potionUI.text = "x" + inventory.CountItens();
 
         //sliderHealth.value = player.GetHealth() + inventory.health;
-        sliderHealth.value = inventory.health;
+        sliderHealth.value = (float)inventory.health / 100;
         // sliderMana.value = player.GetMana() + inventory.mana;
-        sliderMana.value =  inventory.mana;
+        sliderMana.value =  (float)inventory.mana / 100;
 
-        sliderStrength.value = inventory.CountItens(player.item);
+        //sliderStrength.value = (float)inventory.CountItens(player.item) / 100;
         
 
     }

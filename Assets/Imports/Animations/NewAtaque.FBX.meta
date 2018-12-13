@@ -1,0 +1,240 @@
+fileFormatVersion: 2
+guid: afd277189c0c20c4b8bb499e22f53fd3
+timeCreated: 1542566707
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bone001
+    100002: Bone002
+    100004: Bone003
+    100006: Bone004
+    100008: Bone005
+    100010: Bone005(mirrored)
+    100012: Bone006
+    100014: Bone006(mirrored)
+    100016: Bone007
+    100018: Bone007(mirrored)
+    100020: Bone008
+    100022: Bone008(mirrored)
+    100024: Bone009
+    100026: Bone009(mirrored)
+    100028: Corpo
+    100030: //RootNode
+    100032: node_id100
+    100034: node_id27
+    100036: node_id32
+    100038: node_id48
+    100040: node_id50
+    100042: node_id56
+    100044: node_id74
+    400000: Bone001
+    400002: Bone002
+    400004: Bone003
+    400006: Bone004
+    400008: Bone005
+    400010: Bone005(mirrored)
+    400012: Bone006
+    400014: Bone006(mirrored)
+    400016: Bone007
+    400018: Bone007(mirrored)
+    400020: Bone008
+    400022: Bone008(mirrored)
+    400024: Bone009
+    400026: Bone009(mirrored)
+    400028: Corpo
+    400030: //RootNode
+    400032: node_id100
+    400034: node_id27
+    400036: node_id32
+    400038: node_id48
+    400040: node_id50
+    400042: node_id56
+    400044: node_id74
+    2100000: Material_218
+    2100002: Material_217
+    2100004: Material_216
+    2100006: Material_213
+    2100008: Material_214
+    2100010: Material_215
+    2100012: Material_212
+    2100014: Material_211
+    2100016: Material_210
+    2100018: Material_180
+    2100020: Material_181
+    2100022: Material_179
+    2100024: Material_182
+    2100026: Material_178
+    2100028: Material_184
+    2100030: Material_186
+    2100032: Material_185
+    2100034: Material_166
+    2100036: Material_167
+    2100038: Material_165
+    2100040: Material_174
+    2100042: Material_169
+    2100044: Material_170
+    2100046: Material_171
+    2100048: Material_172
+    2100050: Material_168
+    2100052: Material_162
+    2100054: Material_163
+    2100056: Material_164
+    2100058: Material_161
+    2100060: Material_195
+    2100062: Material_196
+    2100064: Material_197
+    2100066: Material_198
+    2100068: Material_199
+    2100070: Material_201
+    2100072: Material_202
+    2100074: Material_203
+    2100076: Material_205
+    2100078: Material_206
+    2100080: Material_207
+    2100082: Material_204
+    2100084: Material_200
+    2100086: Material_194
+    2100088: Material_192
+    2100090: Material_193
+    2100092: Material_191
+    2100094: Material_190
+    2100096: Material_189
+    2100098: Material_183
+    2100100: Material_188
+    2100102: Material_187
+    2100104: Material_209
+    2100106: Material_208
+    2300000: node_id100
+    2300002: node_id27
+    2300004: node_id32
+    2300006: node_id48
+    2300008: node_id50
+    2300010: node_id56
+    2300012: node_id74
+    3300000: node_id100
+    3300002: node_id27
+    3300004: node_id32
+    3300006: node_id48
+    3300008: node_id50
+    3300010: node_id56
+    3300012: node_id74
+    4300000: Corpo
+    4300002: node_id50
+    4300004: node_id48
+    4300006: node_id56
+    4300008: node_id32
+    4300010: node_id27
+    4300012: node_id74
+    4300014: node_id100
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Corpo
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -83,14 +83,15 @@ public class GameManager : MonoBehaviour {
     }
     public void RemoveItem(ConsumableItem item)
     {
-        for (int i = 0; i < itens.Count; i++)
+       /* for (int i = 0; i < itens.Count; i++)
         {
             if (itens[i] == item)
             {
-                itens.RemoveAt(i);
+                
                 break;
             }
-        }
+        }*/
+        itens.RemoveAt(0);
     }
 
     public void Save()
@@ -164,18 +165,18 @@ public class GameManager : MonoBehaviour {
        // player.SetPlayer();
     }
 
-    public int CountItens(ConsumableItem item)
+    public int CountItens()
     {
-        int numberOfItens = 0;
+       /* int numberOfItens = 0;
         for (int i = 0; i < itens.Count; i++)
         {
-            if (item == itens[i])
-            {
+            
+            
                 numberOfItens++;
 
-            }
         }
-        return numberOfItens;
+        Debug.Log(numberOfItens);*/
+        return itens.Count;
     }
 
     public void LoadInventory()

@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
         //panelGameOver = GameObject.Find("GameOver").GetComponent<GameObject>();
         //panelGameOver.SetActive(false);
 
-        VidaDoPlayer = GameManager.inventory.health;
+        //VidaDoPlayer = GameManager.inventory.health;
        // VidaDoPlayer = player.maxHealth;
         DanoPorAtaque = player.strength;
         maxMana = player.maxMana;
@@ -103,6 +103,7 @@ public class PlayerHealth : MonoBehaviour
     //Esse metódo é para dar dano no player está publico da para puxar dentro de qualquer novo script dentro do projeto,
     public void DamagePlayer(int P_damage = 50)
     {
+        Debug.Log("Tira " +P_damage+ " vida");
         //P_damage = 50;
         GameManager.inventory.health = GameManager.inventory.health - P_damage;
         FindObjectOfType<UIManager>().UpdateUI();

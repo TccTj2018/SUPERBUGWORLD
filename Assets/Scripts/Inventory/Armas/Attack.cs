@@ -9,6 +9,7 @@ public class Attack : MonoBehaviour
     private int damagePlayer;
     private GameObject attackPlayer;
     private ParticleSystem particlePower;
+    public Rigidbody objectRb;
 
     public float speed = 1;
     public float destroyTime = 1.5f;
@@ -20,6 +21,8 @@ public class Attack : MonoBehaviour
         attackPlayer = GetComponent<GameObject>();
         damagePlayer = GameManager.inventory.strength;
         particlePower = GetComponentInChildren<ParticleSystem>();
+        particlePower.Stop();
+        objectRb = GetComponent<Rigidbody>();
     }
 
     //public void PlayAnimation(AnimationClip clip)
@@ -33,8 +36,21 @@ public class Attack : MonoBehaviour
     }
     public void PlayAnimation(Rigidbody clip)
     {
-        attackPlayer.SetActive(true);
-        particlePower.Play();
+        Debug.Log(clip);
+        // clip = GetComponent<Rigidbody>();
+
+        try
+        {
+            attackPlayer.SetActive(false); 
+            objectRb = clip;
+            particlePower.Play();
+        }
+        catch (System.Exception ex)
+        {
+            Debug.Log(ex.Message.ToString());
+            Debug.Log(attackPlayer);
+            // clip = GetComponent<Rigidbody>();
+        }
     }
 
     public void SetWeapon(int damageValue)

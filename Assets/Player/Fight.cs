@@ -43,9 +43,7 @@ public class Fight : MonoBehaviour {
         anim = GetComponent<Animator>();
         idle = true;
         attack = GetComponentInChildren<Attack>();
-        // maxHealth = inventory.health;
-        //maxMana = inventory.mana;
-        //defense = inventory.strength;
+
         FindObjectOfType<GameManager>().Load();
        // FindObjectOfType<UIManager>().UpdateUI();
         inventory = GameManager.inventory;
@@ -56,7 +54,7 @@ public class Fight : MonoBehaviour {
     }
 
     void Update () {
-        if (Input.GetButtonDown("Fire1") ) {
+        if (Input.GetButtonDown("Fire3") ) {
             //socoAudio.Play();
             anim.SetTrigger("soco1");
             soco2 = true;
@@ -64,7 +62,7 @@ public class Fight : MonoBehaviour {
            
 
 
-            if (Input.GetButtonDown("Fire1") && soco1 == false && soco2 == true)
+            if (Input.GetButtonDown("Fire2") && soco1 == false && soco2 == true)
             {
 
                 anim.SetTrigger("soco2");
@@ -74,7 +72,9 @@ public class Fight : MonoBehaviour {
 
                     anim.SetTrigger("soco3");
                     soco2 = true;
+                    inventory.mana--;
                 }
+                inventory.mana--;
             }
         }
         if (Input.GetButtonDown("Ataque") )
@@ -86,7 +86,7 @@ public class Fight : MonoBehaviour {
             {
                 Debug.Log("Verdadeiro");
                 anim.SetTrigger("soco4");
-                GameObject ObjetoInstanciado = Instantiate(prefab, spawpoint2.position, spawpoint2.rotation) as GameObject;
+               // GameObject ObjetoInstanciado = Instantiate(prefab, spawpoint2.position, spawpoint2.rotation) as GameObject;
                 mc.enabled = false;
                 enabled = false;
                 StartCoroutine("Reset");
@@ -97,17 +97,18 @@ public class Fight : MonoBehaviour {
                 Debug.Log("False");
                 Debug.Log("Verdadeiro");
                 anim.SetTrigger("soco4");
-                GameObject ObjetoInstanciado = Instantiate(prefab, spawpoint.position, spawpoint.transform.rotation, pai) as GameObject;
+                //GameObject ObjetoInstanciado = Instantiate(prefab, spawpoint.position, spawpoint.transform.rotation, pai) as GameObject;
                 mc.enabled = false;
                 enabled = false;
                 StartCoroutine("Reset");
             }
+            inventory.mana-= 10;
 
         }
-        if (Input.GetButtonDown("Fire3") && Time.time > nextAttack && weaponEquipped != null)
+        if (Input.GetButtonDown("Fire2") && Time.time > nextAttack && weaponEquipped != null)
         {
             anim.SetTrigger("soco1");
-            attack.PlayAnimation(weaponEquipped.animationAnim);
+           // attack.PlayAnimation(weaponEquipped.animationAnim);
             nextAttack = Time.time + fireRate;
             Rigidbody clone;
             clone = Instantiate(weaponEquipped.animationAnim, spawpoint.position, spawpoint.rotation);
@@ -136,8 +137,8 @@ public class Fight : MonoBehaviour {
     public void AddWeapon(Weapon weapon)
     {
         weaponEquipped = weapon;
-        attack.SetWeapon(weaponEquipped.damage);
-        Debug.Log(weaponEquipped.damage);
+        //attack.SetWeapon(weaponEquipped.damage);
+       // Debug.Log(weaponEquipped.damage);
 
     }
 
@@ -146,19 +147,26 @@ public class Fight : MonoBehaviour {
     {
         armor = item;
         defense = armor.defense;
-        Debug.Log(defense);
+       // Debug.Log(defense);
     }
     //Para o script de vida.
     public void UseItem(ConsumableItem item)
     {
-        inventory.health += item.healthGain;
+        inventory.health += inventory.itens[0].healthGain;
+        Debug.Log(inventory.health);
+
         if (inventory.health >= maxHealth)
         {
             health = maxHealth;
         }
-        inventory.mana += item.manaGain;
+
+        inventory.mana += inventory.itens[0].manaGain;
+
         if (inventory.mana >= maxMana)
+        {
             inventory.mana = maxMana;
+        }
+            
     }
 
     public int GetHealth()

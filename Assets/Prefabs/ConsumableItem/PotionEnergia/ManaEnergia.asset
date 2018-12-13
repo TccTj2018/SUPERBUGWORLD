@@ -11,10 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f515824ceabc3bc41b3ab20242937b62, type: 3}
   m_Name: ManaEnergia
   m_EditorClassIdentifier: 
-  itemID: 7
+  itemID: 1
   itemName: PotionMana
   descrition: "Po\xE7\xE3o de energia ajuda a recuperar suas energias"
-  imageItem: {fileID: 0}
-  healthGain: 0
+  imageItem: {fileID: 114061422005843900, guid: 989b407b84a05db43921ead74b9c6ec7,
+    type: 2}
+  healthGain: 30
   manaGain: 30
   message: Potion Power

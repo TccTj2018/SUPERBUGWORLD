@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 54662793325770014}
   - component: {fileID: 65326254830770738}
   - component: {fileID: 114376059042485122}
+  - component: {fileID: 114154164847242464}
   m_Layer: 0
   m_Name: teapot
   m_TagString: Untagged
@@ -139,11 +140,23 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1543534333890434}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 109.51372, y: 68.14659, z: 53.665443}
   m_Center: {x: -3.6469097, y: 3.8131596e-13, z: 26.832722}
+--- !u!114 &114154164847242464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1543534333890434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86dae33796331a64591ecde56043bdec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageEnemy: 5
 --- !u!114 &114376059042485122
 MonoBehaviour:
   m_ObjectHideFlags: 1
